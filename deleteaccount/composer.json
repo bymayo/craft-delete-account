@@ -1,0 +1,14 @@
+{
+	"name": "bymayo/deleteaccount",
+	"description": "Allow users to delete their account on the front end",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "ByMayo",
+			"homepage": "http://bymayo.co.uk"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

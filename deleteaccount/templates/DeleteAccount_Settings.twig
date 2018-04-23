@@ -1,0 +1,26 @@
+{#
+/**
+ * Delete Account plugin for Craft CMS
+ *
+ * Delete Account Settings.twig
+ *
+ * @author    ByMayo
+ * @copyright Copyright (c) 2018 ByMayo
+ * @link      http://bymayo.co.uk
+ * @package   DeleteAccount
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% includeCssResource "deleteaccount/css/DeleteAccount_Style.css" %}
+{% includeJsResource "deleteaccount/js/DeleteAccount_Script.js" %}
+
+{{ forms.textField({
+    label: 'Some Setting',
+    instructions: 'Enter some setting here.',
+    id: 'someSetting',
+    name: 'someSetting', 
+    value: settings['someSetting']})
+}}
