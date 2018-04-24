@@ -28,12 +28,12 @@ class DeleteAccountPlugin extends BasePlugin
 
     public function getDocumentationUrl()
     {
-        return 'https://github.com/bymayo/craft-delete-account/blob/master/README.md';
+        return 'https://github.com/bymayo/craft-delete-account/blob/craft-2/README.md';
     }
 
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/bymayo/craft-delete-account/master/releases.json';
+        return 'https://github.com/bymayo/craft-delete-account/blob/craft-2/releases.json';
     }
 
     public function getVersion()
