@@ -1,43 +1,48 @@
-# Delete Account plugin for Craft CMS 3.x
+**Looking for Craft 2 Support?** [Delete Account for Craft 2](https://github.com/bymayo/craft-delete-account/tree/craft-2)
 
-Allows users to delete their own account within Twig templates to adhere to GDPR rules
+<img src="https://github.com/bymayo/craft-delete-account/blob/craft-2/screenshots/icon.png?raw=true" width="50">
 
-![Screenshot](resources/img/plugin-logo.png)
+# Delete Account
 
-## Requirements
+Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party.*
 
-## Installation
+## Features
 
-To install the plugin, follow these instructions.
+- Set a `keyword` that needs to be correctly entered before accounts are deleted (Stops accidental deletion).
+- Disallow admins from deleting their accounts on front end.
 
-1. Open your terminal and go to your Craft project:
+## Install
 
-        cd /path/to/project
+- Add the `deleteaccount` directory into your `craft/plugins` directory.
+- Navigate to Settings -> Plugins and click the "Install" button.
 
-2. Then tell Composer to load the plugin:
+## Config
 
-        composer require bymayo/delete-account
+Navigate to Settings -> Plugins -> Delete Account (Cog icon) to customise the config settings.
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Delete Account.
+## Templating
 
-## Delete Account Overview
+You can simply output the form in your account templates by using the following method:
 
--Insert text here-
+```
+{{ craft.deleteaccount.form }}
+```
 
-## Configuring Delete Account
+If you want more control you can take the `form` template from `craft/plugins/deleteaccount/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
 
--Insert text here-
+You can optionally grab settings from the plugin:
 
-## Using Delete Account
+```
+{{ craft.deleteaccount.settings('redirect') }}
+```
 
--Insert text here-
+## Roadmap
 
-## Delete Account Roadmap
+- Delete all user related Commerce orders.
+- Delete all user related data in 3rd party plugins.
 
-Some things to do, and ideas for potential features:
+## Credits
 
-* Release it
-
-Brought to you by [ByMayo](http://bymayo.co.uk)
+- Remove Account by Gregor Cresnar from Noun Project (https://thenounproject.com/grega.cresnar/)
