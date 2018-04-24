@@ -1,4 +1,6 @@
-<img src="https://raw.githubusercontent.com/bymayo/craft-delete-account/master/screenshots/icon.png" width="50">
+**Looking for Craft 3 Support?** [Delete Account for Craft 3](https://github.com/bymayo/craft-delete-account/)
+
+<img src="https://github.com/bymayo/craft-delete-account/blob/master/screenshots/icon.png?raw=true" width="50">
 
 # Delete Account
 
@@ -18,7 +20,7 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 
 ## Config
 
-Navigate to Settings -> Plugins -> Delete Account (Little cog) to customise the config settings.
+Navigate to Settings -> Plugins -> Delete Account (Cog icon) to customise the config settings.
 
 ## Templating
 
