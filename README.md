@@ -1,6 +1,6 @@
-<img src="https://github.com/bymayo/deleteaccount/raw/master/screenshots/icon.png" width="50">
+<img src="https://raw.githubusercontent.com/bymayo/craft-delete-account/master/screenshots/icon.png" width="50">
 
-# Select2
+# Delete Account
 
 Select2 is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
 
