@@ -10,7 +10,7 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 
 ## Features
 
-- Set a 'keyword' that needs to be correctly entered before accounts are deleted (Stops accidental deletion).
+- Set a `keyword` that needs to be correctly entered before accounts are deleted (Stops accidental deletion).
 - Disallow admins from deleting their accounts on front end.
 
 ## Install
