@@ -31,28 +31,35 @@ class DefaultController extends Controller
      *         The actions must be in 'kebab-case'
      * @access protected
      */
-    protected $allowAnonymous = ['index', 'do-something'];
+    protected $allowAnonymous = ['delete'];
 
     // Public Methods
     // =========================================================================
 
-    /**
-     * @return mixed
-     */
-    public function actionIndex()
+    public function actionDelete()
     {
-        $result = 'Welcome to the DefaultController actionIndex() method';
 
-        return $result;
-    }
+         $this->requirePostRequest();
+         $request = Craft::$app->getRequest();
 
-    /**
-     * @return mixed
-     */
-    public function actionDoSomething()
-    {
-        $result = 'Welcome to the DefaultController actionDoSomething() method';
+         // $this->requirePostRequest();
+         //
+         // $attributes = craft()->request->getPost();
+         //
+         // if (craft()->deleteAccount->checkAccount($attributes))
+         // {
+         //    craft()->userSession->setFlash('deleteAccountFlash', 'Your account has been deleted.');
+         //    return $attributes['redirect'];
+         // }
+         // else {
+         //    craft()->userSession->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
+         //    return false;
+         // }
+         //
+         // return false;
 
-        return $result;
-    }
+         return true;
+
+   }
+
 }

@@ -22,19 +22,31 @@ use craft\base\Component;
  */
 class DeleteAccountService extends Component
 {
-    // Public Methods
-    // =========================================================================
 
-    /*
-     * @return mixed
-     */
-    public function exampleService()
+    public static function getSettings($setting)
     {
-        $result = 'something';
-        // Check our Plugin's settings for `someAttribute`
-        if (DeleteAccount::$plugin->getSettings()->someAttribute) {
-        }
 
-        return $result;
+        $settings = DeleteAccount::$plugin->getSettings();
+        return $settings->$setting;
+
     }
+
+    public static function checkAccount($attributes)
+    {
+
+      $currentUser = craft()->userSession->getUser();
+
+      if($currentUser->admin && $this->settings('deleteAdmin') == false) {
+         return false;
+      }
+      else {
+         if ($attributes['confirmationKeyword'] == $this->settings('confirmationKeyword'))
+         {
+            return craft()->users->deleteUser($currentUser);
+         }
+         return false;
+      }
+
+   }
+
 }

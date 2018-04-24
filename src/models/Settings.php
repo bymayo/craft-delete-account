@@ -28,7 +28,9 @@ class Settings extends Model
     /**
      * @var string
      */
-    public $someAttribute = 'Some Default';
+    public $deleteAdmin = false;
+    public $confirmationKeyword = 'DELETE';
+    public $redirect = null;
 
     // Public Methods
     // =========================================================================
@@ -39,8 +41,8 @@ class Settings extends Model
     public function rules()
     {
         return [
-            ['someAttribute', 'string'],
-            ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['deleteAdmin', 'boolean'],
+            [['confirmationKeyword', 'redirect'], 'string']
         ];
     }
 }

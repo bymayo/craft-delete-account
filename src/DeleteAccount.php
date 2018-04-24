@@ -54,9 +54,11 @@ class DeleteAccount extends Plugin
     // Public Methods
     // =========================================================================
 
-    /**
-     * @inheritdoc
-     */
+
+    public $controllerMap = [
+        'default' => DefaultController::class,
+    ];
+
     public function init()
     {
         parent::init();
@@ -66,7 +68,7 @@ class DeleteAccount extends Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_SITE_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                $event->rules['siteActionTrigger1'] = 'delete-account/default';
+                $event->rules['test'] = 'delete-account/default/delete';
             }
         );
 
@@ -74,7 +76,7 @@ class DeleteAccount extends Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                $event->rules['cpActionTrigger1'] = 'delete-account/default/do-something';
+                // $event->rules['cpActionTrigger1'] = 'delete-account/default/do-something';
             }
         );
 

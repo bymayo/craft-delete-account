@@ -15,12 +15,30 @@
 
 {% import "_includes/forms" as forms %}
 
-{% do view.registerAssetBundle("bymayo\\deleteaccount\\assetbundles\\deleteaccount\\DeleteAccountAsset") %}
+{{
+   forms.lightswitchField(
+      {
+         label: 'Allow "Admins" to delete their own account?',
+         id: 'deleteAdmin',
+         name: 'deleteAdmin',
+         value: settings['deleteAdmin'],
+         on: (settings['deleteAdmin'] is defined) ? settings['deleteAdmin'] : ''
+      }
+   )
+}}
 
 {{ forms.textField({
-    label: 'Some Field',
-    instructions: 'Enter some setting here.',
-    id: 'someAttribute',
-    name: 'someAttribute',
-    value: settings['someAttribute']})
+    label: 'Confirmation Keyword',
+    instructions: 'The word/phrase that is needed to confirm before the users account is deleted.',
+    id: 'confirmationKeyword',
+    name: 'confirmationKeyword',
+    value: settings['confirmationKeyword']})
+}}
+
+{{ forms.textField({
+    label: 'Redirect After Delete',
+    instructions: 'E.g. A template such as "account/delete-confirm".',
+    id: 'redirect',
+    name: 'redirect',
+    value: settings['redirect']})
 }}

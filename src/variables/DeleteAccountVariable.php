@@ -11,6 +11,9 @@
 namespace bymayo\deleteaccount\variables;
 
 use bymayo\deleteaccount\DeleteAccount;
+use bymayo\deleteaccount\services\DeleteAccountService;
+
+use craft\helpers\Template as Template;
 
 use Craft;
 
@@ -28,12 +31,22 @@ class DeleteAccountVariable
      * @param null $optional
      * @return string
      */
-    public function exampleVariable($optional = null)
+
+     public function settings($setting)
+     {
+        return DeleteAccountService::getSettings($setting);
+     }
+
+    public function form()
     {
-        $result = "And away we go to the Twig template...";
-        if ($optional) {
-            $result = "I'm feeling optional today...";
-        }
-        return $result;
+
+      $view = Craft::$app->getView();
+      $templatePath = $view->getTemplatesPath();
+      $view->setTemplatesPath(DeleteAccount::getInstance()->getBasePath());
+      $template = $view->renderTemplate('/templates/form');
+      $view->setTemplatesPath($templatePath);
+
+      return Template::raw($template);
+
     }
 }
