@@ -1,0 +1,22 @@
+{% if currentUser %}
+
+   <form method="post" accept-charset="UTF-8">
+
+      {{ getCsrfInput() }}
+      <input type="hidden" name="action" value="deleteAccount/delete">
+      <input type="hidden" name="redirect" value="{{ craft.deleteaccount.settings('redirect') }}">
+
+      <div class="alert">
+         {{ craft.session.getFlash('deleteAccountFlash') }}
+      </div>
+
+      <div class="field-container">
+         <label for="confirmationKeyword">Type the word <em>"{{ craft.deleteaccount.settings('confirmationKeyword') }}"</em> to confirm you want to permanently delete your account.</label>
+         <input type="text" name="confirmationKeyword" id="confirmationKeyword">
+      </div>
+
+      <button class="button">Delete Account</button>
+
+   </form>
+
+{% endif %}

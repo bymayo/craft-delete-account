@@ -1,24 +1,33 @@
 <?php
 /**
- * Delete Account plugin for Craft CMS
- *
- * Delete Account Variable
- *
- * @author    ByMayo
- * @copyright Copyright (c) 2018 ByMayo
- * @link      http://bymayo.co.uk
- * @package   DeleteAccount
- * @since     1.0.0
+ * @author     ByMayo
+ * @package    DeleteAccount
+ * @since      1.0.0
+ * @copyright  Copyright (c) 2018 ByMayo
  */
 
 namespace Craft;
 
 class DeleteAccountVariable
 {
-    /**
-     */
-    public function exampleVariable($optional = null)
+
+    public function settings($setting)
     {
-        return "And away we go to the Twig template...";
+        return craft()->deleteAccount->settings($setting);
     }
+
+    public function form()
+    {
+
+      $templatePath = craft()->path->getTemplatesPath();
+      $path = craft()->path->getPluginsPath() . 'deleteAccount/templates';
+
+      craft()->path->setTemplatesPath($path);
+      $template = craft()->templates->render('form');
+      craft()->path->setTemplatesPath($templatePath);
+
+      return TemplateHelper::getRaw($template);
+
+    }
+
 }

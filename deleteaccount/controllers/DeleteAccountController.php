@@ -1,14 +1,9 @@
 <?php
 /**
- * Delete Account plugin for Craft CMS
- *
- * DeleteAccount Controller
- *
- * @author    ByMayo
- * @copyright Copyright (c) 2018 ByMayo
- * @link      http://bymayo.co.uk
- * @package   DeleteAccount
- * @since     1.0.0
+ * @author     ByMayo
+ * @package    DeleteAccount
+ * @since      1.0.0
+ * @copyright  Copyright (c) 2018 ByMayo
  */
 
 namespace Craft;
@@ -16,16 +11,27 @@ namespace Craft;
 class DeleteAccountController extends BaseController
 {
 
-    /**
-     * @var    bool|array Allows anonymous access to this controller's actions.
-     * @access protected
-     */
-    protected $allowAnonymous = array('actionIndex',
-        );
+    protected $allowAnonymous = array();
 
-    /**
-     */
-    public function actionIndex()
+    public function actionDelete()
     {
+
+      $this->requirePostRequest();
+
+      $attributes = craft()->request->getPost();
+
+		if (craft()->deleteAccount->checkAccount($attributes))
+		{
+         craft()->userSession->setFlash('deleteAccountFlash', 'Your account has been deleted.');
+         return $attributes['redirect'];
+		}
+      else {
+         craft()->userSession->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
+         return false;
+      }
+
+		return false;
+
     }
+    
 }
