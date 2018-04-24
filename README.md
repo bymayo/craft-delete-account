@@ -2,9 +2,9 @@
 
 # Delete Account
 
-Select2 is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
+Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
 
-NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party.
+*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party.*
 
 ## Features
 
