@@ -15,8 +15,8 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 
 ## Install
 
-- Install with Composer via composer require bymayo/delete-account from your project directory
-- Install the plugin in the Craft Control Panel under Settings > Plugins
+- Install with Composer via `composer require bymayo/delete-account` from your project directory
+- Install the plugin in the Craft Control Panel under `Settings > Plugins`
 
 You can also install the plugin via the Plugin Store in the Craft Admin CP.
 
