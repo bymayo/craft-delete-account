@@ -2,11 +2,11 @@
 
 <img src="https://github.com/bymayo/craft-delete-account/blob/craft-2/screenshots/icon.png?raw=true" width="50">
 
-# Delete Account
+# Delete Account for Craft 2.x
 
-Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
+Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates. This also adheres to GDPR rules regarding users being able to manage their own data and delete their account.
 
-*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party.*
+*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party plugin (Yet).*
 
 ## Features
 
@@ -40,7 +40,8 @@ You can optionally grab settings from the plugin:
 
 ## Roadmap
 
-- Option to send an email to the user after deletion.
+- Setting to disallow users with access to CP from deleting their accounts.
+- Setting to send an email to the user after deletion.
 - Delete all user related Commerce orders.
 - Delete all user related data in 3rd party plugins.
 
