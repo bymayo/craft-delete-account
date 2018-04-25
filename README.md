@@ -2,11 +2,11 @@
 
 <img src="https://github.com/bymayo/craft-delete-account/blob/craft-2/screenshots/icon.png?raw=true" width="50">
 
-# Delete Account
+# Delete Account for Craft 3.x
 
-Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates to adhere to GDPR rules on users being able to manage their own data.
+Delete Account is a Craft CMS plugin that allows users to delete their own account within your own Twig templates. This also adheres to GDPR rules regarding users being able to manage their own data and delete their account.
 
-*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party.*
+*NOTE: This only removes the users account, and doesn't remove any data they previously submitted via a Commerce order or 3rd Party plugin (Yet).*
 
 ## Features
 
@@ -15,12 +15,14 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 
 ## Install
 
-- Add the `deleteaccount` directory into your `craft/plugins` directory.
-- Navigate to Settings -> Plugins and click the "Install" button.
+- Install with Composer via composer require bymayo/delete-account from your project directory
+- Install the plugin in the Craft Control Panel under Settings > Plugins
+
+You can also install the plugin via the Plugin Store in the Craft Admin CP.
 
 ## Config
 
-Navigate to Settings -> Plugins -> Delete Account (Cog icon) to customise the config settings.
+Navigate to Settings -> Plugins -> Delete Account -> Settings to customise the config settings.
 
 ## Templating
 
@@ -30,7 +32,7 @@ You can simply output the form in your account templates by using the following 
 {{ craft.deleteaccount.form }}
 ```
 
-If you want more control you can take the `form` template from `craft/plugins/deleteaccount/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
+If you want more control you can take the `form` template from `bymayo/deleteaccount/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
 
 You can optionally grab settings from the plugin:
 
@@ -40,6 +42,8 @@ You can optionally grab settings from the plugin:
 
 ## Roadmap
 
+- Setting to disallow users with access to CP from deleting their accounts.
+- Setting to send an email to the user after deletion.
 - Delete all user related Commerce orders.
 - Delete all user related data in 3rd party plugins.
 
