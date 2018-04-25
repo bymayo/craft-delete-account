@@ -29,7 +29,7 @@ Navigate to Settings -> Plugins -> Delete Account -> Settings to customise the c
 You can simply output the form in your account templates by using the following method:
 
 ```
-{{ craft.deletAaccount.form }}
+{{ craft.deleteAccount.form }}
 ```
 
 If you want more control you can take the `form` template from `bymayo/deleteaccount/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
