@@ -1,11 +1,9 @@
 <?php
 /**
- * Delete Account plugin for Craft CMS 3.x
- *
- * Allows users to delete their own account within Twig templates to adhere to GDPR rules
- *
- * @link      http://bymayo.co.uk
- * @copyright Copyright (c) 2018 ByMayo
+ * @author     ByMayo
+ * @package    DeleteAccount
+ * @since      1.0.0
+ * @copyright  Copyright (c) 2018 ByMayo
  */
 
 namespace bymayo\deleteaccount\services;
@@ -15,15 +13,10 @@ use bymayo\deleteaccount\DeleteAccount;
 use Craft;
 use craft\base\Component;
 
-/**
- * @author    ByMayo
- * @package   DeleteAccount
- * @since     1.0.0
- */
 class DeleteAccountService extends Component
 {
 
-    public static function getSettings($setting)
+    public static function settings($setting)
     {
 
         $settings = DeleteAccount::$plugin->getSettings();
@@ -34,15 +27,15 @@ class DeleteAccountService extends Component
     public static function checkAccount($attributes)
     {
 
-      $currentUser = craft()->userSession->getUser();
+      $currentUser = Craft::$app->getUser();
 
-      if($currentUser->admin && $this->settings('deleteAdmin') == false) {
+      if($currentUser->getIsAdmin() && self::settings('deleteAdmin') == false) {
          return false;
       }
       else {
-         if ($attributes['confirmationKeyword'] == $this->settings('confirmationKeyword'))
+         if ($attributes->getBodyParam('confirmationKeyword') == self::settings('confirmationKeyword'))
          {
-            return craft()->users->deleteUser($currentUser);
+            return Craft::$app->getElements()->deleteElementById($currentUser->id, 'craft\elements\User');
          }
          return false;
       }

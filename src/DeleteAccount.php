@@ -1,11 +1,9 @@
 <?php
 /**
- * Delete Account plugin for Craft CMS 3.x
- *
- * Allows users to delete their own account within Twig templates to adhere to GDPR rules
- *
- * @link      http://bymayo.co.uk
- * @copyright Copyright (c) 2018 ByMayo
+ * @author     ByMayo
+ * @package    DeleteAccount
+ * @since      1.0.0
+ * @copyright  Copyright (c) 2018 ByMayo
  */
 
 namespace bymayo\deleteaccount;
@@ -24,43 +22,16 @@ use craft\events\RegisterUrlRulesEvent;
 
 use yii\base\Event;
 
-/**
- * Class DeleteAccount
- *
- * @author    ByMayo
- * @package   DeleteAccount
- * @since     1.0.0
- *
- * @property  DeleteAccountServiceService $deleteAccountService
- */
 class DeleteAccount extends Plugin
 {
-    // Static Properties
-    // =========================================================================
 
-    /**
-     * @var DeleteAccount
-     */
     public static $plugin;
 
-    // Public Properties
-    // =========================================================================
-
-    /**
-     * @var string
-     */
     public $schemaVersion = '1.0.0';
-
-    // Public Methods
-    // =========================================================================
-
-
-    public $controllerMap = [
-        'default' => DefaultController::class,
-    ];
 
     public function init()
     {
+
         parent::init();
         self::$plugin = $this;
 
@@ -76,7 +47,6 @@ class DeleteAccount extends Plugin
             UrlManager::class,
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
-                // $event->rules['cpActionTrigger1'] = 'delete-account/default/do-something';
             }
         );
 
@@ -84,7 +54,6 @@ class DeleteAccount extends Plugin
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
             function (Event $event) {
-                /** @var CraftVariable $variable */
                 $variable = $event->sender;
                 $variable->set('deleteAccount', DeleteAccountVariable::class);
             }
@@ -107,22 +76,14 @@ class DeleteAccount extends Plugin
             ),
             __METHOD__
         );
+
     }
 
-    // Protected Methods
-    // =========================================================================
-
-    /**
-     * @inheritdoc
-     */
     protected function createSettingsModel()
     {
         return new Settings();
     }
 
-    /**
-     * @inheritdoc
-     */
     protected function settingsHtml(): string
     {
         return Craft::$app->view->renderTemplate(
@@ -132,4 +93,5 @@ class DeleteAccount extends Plugin
             ]
         );
     }
+    
 }

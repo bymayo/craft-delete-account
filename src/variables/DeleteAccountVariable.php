@@ -1,11 +1,9 @@
 <?php
 /**
- * Delete Account plugin for Craft CMS 3.x
- *
- * Allows users to delete their own account within Twig templates to adhere to GDPR rules
- *
- * @link      http://bymayo.co.uk
- * @copyright Copyright (c) 2018 ByMayo
+ * @author     ByMayo
+ * @package    DeleteAccount
+ * @since      1.0.0
+ * @copyright  Copyright (c) 2018 ByMayo
  */
 
 namespace bymayo\deleteaccount\variables;
@@ -17,24 +15,12 @@ use craft\helpers\Template as Template;
 
 use Craft;
 
-/**
- * @author    ByMayo
- * @package   DeleteAccount
- * @since     1.0.0
- */
 class DeleteAccountVariable
 {
-    // Public Methods
-    // =========================================================================
-
-    /**
-     * @param null $optional
-     * @return string
-     */
 
      public function settings($setting)
      {
-        return DeleteAccountService::getSettings($setting);
+        return DeleteAccountService::settings($setting);
      }
 
     public function form()
