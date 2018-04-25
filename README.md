@@ -40,6 +40,7 @@ You can optionally grab settings from the plugin:
 
 ## Roadmap
 
+- Option to send an email to the user after deletion.
 - Delete all user related Commerce orders.
 - Delete all user related data in 3rd party plugins.
 
