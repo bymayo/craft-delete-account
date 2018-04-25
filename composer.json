@@ -1,6 +1,6 @@
 {
     "name": "bymayo/delete-account",
-    "description": "Allows users to delete their own account within Twig templates to adhere to GDPR rules",
+    "description": "Allows users to delete their own account within Twig templates (Front end).",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -11,8 +11,8 @@
         "delete account"
     ],
     "support": {
-        "docs": "https://github.com/bymayo/delete-account/blob/master/README.md",
-        "issues": "https://github.com/bymayo/delete-account/issues"
+        "docs": "https://github.com/bymayo/craft-delete-account/blob/master/README.md",
+        "issues": "https://github.com/bymayo/craft-delete-account/issues"
     },
     "license": "MIT",
     "authors": [
@@ -34,7 +34,7 @@
         "handle": "delete-account",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/bymayo/delete-account/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/bymayo/craft-delete-account/master/CHANGELOG.md",
         "components": {
             "deleteAccountService": "bymayo\\deleteaccount\\services\\DeleteAccountService"
         },

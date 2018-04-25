@@ -1,1 +1,24 @@
-{"pluginName":"Delete Account","pluginDescription":"Allows users to delete their own account within Twig templates to adhere to GDPR rules","pluginVersion":"1.0.0","pluginAuthorName":"ByMayo","pluginVendorName":"bymayo","pluginAuthorUrl":"http://bymayo.co.uk","pluginAuthorGithub":"bymayo","codeComments":"","pluginComponents":["controllers","services","settings","variables"],"consolecommandName":"","controllerName":"","cpsectionName":"","elementName":"","fieldName":"","modelName":"","purchasableName":"","recordName":"","serviceName":"","taskName":"","utilityName":"","widgetName":"","apiVersion":"api_version_3_0"}
+{
+   "pluginName": "Delete Account",
+   "pluginDescription": "Allows users to delete their own account within Twig templates (Front end).",
+   "pluginVersion": "1.0.0",
+   "pluginAuthorName": "ByMayo",
+   "pluginVendorName": "bymayo",
+   "pluginAuthorUrl": "http://bymayo.co.uk",
+   "pluginAuthorGithub": "bymayo",
+   "codeComments": "",
+   "pluginComponents": ["controllers", "services", "settings", "variables"],
+   "consolecommandName": "",
+   "controllerName": "",
+   "cpsectionName": "",
+   "elementName": "",
+   "fieldName": "",
+   "modelName": "",
+   "purchasableName": "",
+   "recordName": "",
+   "serviceName": "",
+   "taskName": "",
+   "utilityName": "",
+   "widgetName": "",
+   "apiVersion": "api_version_3_0"
+}
