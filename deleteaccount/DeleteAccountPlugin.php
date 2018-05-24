@@ -38,12 +38,12 @@ class DeleteAccountPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     public function getSchemaVersion()
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     public function getDeveloper()
@@ -61,7 +61,8 @@ class DeleteAccountPlugin extends BasePlugin
         return array(
             'deleteAdmin' => array(AttributeType::Bool, 'default' => false),
             'confirmationKeyword' => array(AttributeType::Mixed, 'default' => 'DELETE'),
-            'redirect' => array(AttributeType::Mixed, 'default' => null)
+            'redirect' => array(AttributeType::Mixed, 'default' => null),
+            'transferContentTo' => array(AttributeType::Mixed, 'default' => null)
         );
     }
 

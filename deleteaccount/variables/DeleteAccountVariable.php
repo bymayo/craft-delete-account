@@ -10,24 +10,25 @@ namespace Craft;
 
 class DeleteAccountVariable
 {
-
     public function settings($setting)
     {
         return craft()->deleteAccount->settings($setting);
     }
 
-    public function form()
+    public function getElementById($id)
     {
-
-      $templatePath = craft()->path->getTemplatesPath();
-      $path = craft()->path->getPluginsPath() . 'deleteAccount/templates';
-
-      craft()->path->setTemplatesPath($path);
-      $template = craft()->templates->render('form');
-      craft()->path->setTemplatesPath($templatePath);
-
-      return TemplateHelper::getRaw($template);
-
+        return craft()->deleteAccount->getElementById($id);
     }
 
+    public function form()
+    {
+        $templatePath = craft()->path->getTemplatesPath();
+        $path = craft()->path->getPluginsPath() . 'deleteAccount/templates';
+
+        craft()->path->setTemplatesPath($path);
+        $template = craft()->templates->render('form');
+        craft()->path->setTemplatesPath($templatePath);
+
+        return TemplateHelper::getRaw($template);
+    }
 }

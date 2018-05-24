@@ -7,23 +7,43 @@
          id: 'deleteAdmin',
          name: 'deleteAdmin',
          value: settings['deleteAdmin'],
-         on: (settings['deleteAdmin'] is defined) ? settings['deleteAdmin'] : ''
+         on: (settings['deleteAdmin'] is not null) ? settings['deleteAdmin'] : ''
       }
    )
 }}
 
-{{ forms.textField({
-    label: 'Confirmation Keyword',
-    instructions: 'The word/phrase that is needed to confirm before the users account is deleted.',
-    id: 'confirmationKeyword',
-    name: 'confirmationKeyword',
-    value: settings['confirmationKeyword']})
+{{ forms.elementSelectField(
+      {
+         label: 'Transfer content to',
+         instructions: 'If a deleted user has related content, transfer it to a selected user. *Required if using Commerce*.',
+         id: 'transferContentTo',
+         name: 'transferContentTo',
+         elements: (settings['transferContentTo'] is not null) ? [craft.deleteaccount.getElementById(settings['transferContentTo'][0])],
+         elementType: craft.elements.getElementType('User'),
+         limit: 1,
+         addButtonLabel: 'Select a User'|t
+      }
+   )
 }}
 
-{{ forms.textField({
-    label: 'Redirect After Delete',
-    instructions: 'E.g. A template such as "account/delete-confirm".',
-    id: 'redirect',
-    name: 'redirect',
-    value: settings['redirect']})
+{{ forms.textField(
+      {
+         label: 'Confirmation Keyword',
+         instructions: 'The word/phrase that is needed to confirm before the users account is deleted.',
+         id: 'confirmationKeyword',
+         name: 'confirmationKeyword',
+         value: settings['confirmationKeyword']
+      }
+   )
+}}
+
+{{ forms.textField(
+      {
+         label: 'Redirect After Delete',
+         instructions: 'E.g. A template such as "account/delete-confirm".',
+         id: 'redirect',
+         name: 'redirect',
+         value: settings['redirect']
+      }
+   )
 }}

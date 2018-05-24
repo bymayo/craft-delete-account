@@ -22,8 +22,8 @@ class DeleteAccountController extends BaseController
 
 		if (craft()->deleteAccount->checkAccount($attributes))
 		{
-         craft()->userSession->setFlash('deleteAccountFlash', 'Your account has been deleted.');
-         return $attributes['redirect'];
+         craft()->userSession->logout(false);
+         return $this->redirect($attributes['redirect']);
 		}
       else {
          craft()->userSession->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
@@ -33,5 +33,5 @@ class DeleteAccountController extends BaseController
 		return false;
 
     }
-    
+
 }
