@@ -18,7 +18,7 @@
          instructions: 'If a deleted user has related content, transfer it to a selected user. *Required if using Commerce*.',
          id: 'transferContentTo',
          name: 'transferContentTo',
-         elements: (settings['transferContentTo'] is not null) ? [craft.deleteaccount.getElementById(settings['transferContentTo'][0])],
+         elements: (settings['transferContentTo']|length) ? [craft.deleteaccount.getElementById(settings['transferContentTo'][0])],
          elementType: craft.elements.getElementType('User'),
          limit: 1,
          addButtonLabel: 'Select a User'|t
