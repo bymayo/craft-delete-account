@@ -38,12 +38,12 @@ class DeleteAccountPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.2';
+        return '1.0.3';
     }
 
     public function getSchemaVersion()
     {
-        return '1.0.2';
+        return '1.0.3';
     }
 
     public function getDeveloper()
