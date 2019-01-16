@@ -1,8 +1,10 @@
-**Looking for Craft 3 Support?** [Delete Account for Craft 3](https://github.com/bymayo/craft-delete-account/)
+> ⚠️ Deprecated - This Craft CMS 2.x plugin is no longer supported. Consider upgrading to the Craft CMS 3.x version.
+
+⚡️**Looking for Craft CMS 3 Support?**  [Delete Account for Craft CMS 3](https://github.com/bymayo/craft-delete-account/)
 
 <img src="https://github.com/bymayo/craft-delete-account/blob/craft-2/screenshots/icon.png?raw=true" width="50">
 
-# Delete Account for Craft 2.x
+# Delete Account for Craft CMS 2.x
 
 Delete Account is a Craft CMS plugin that allows users to delete their own account within Twig templates (Front end). This also adheres to GDPR rules regarding users being able to manage their own data and delete their account.
 
@@ -12,6 +14,11 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 
 - Set a `keyword` that needs to be correctly entered before accounts are deleted (Stops accidental deletion).
 - Disallow admins from deleting their accounts on front end.
+
+## Requirements
+
+- Craft CMS 3.x
+- MySQL (No PostgreSQL support)
 
 ## Install
 
