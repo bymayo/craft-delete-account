@@ -1,6 +1,6 @@
 <img src="https://github.com/bymayo/craft-delete-account/blob/master/resources/img/icon.png?raw=true" width="50">
 
-# Delete Account for Craft 3.x
+# Delete Account for Craft CMS 3.x
 
 Delete Account is a Craft CMS plugin that allows users to delete their own account within Twig templates (Front end). This also adheres to GDPR rules regarding users being able to manage their own data and delete their account.
 
