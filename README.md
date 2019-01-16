@@ -13,6 +13,11 @@ Delete Account is a Craft CMS plugin that allows users to delete their own accou
 - Set a `keyword` that needs to be correctly entered before accounts are deleted (Stops accidental deletion).
 - Disallow admins from deleting their accounts on front end.
 
+## Requirements
+
+- Craft CMS 3.x
+- MySQL (No PostgreSQL support)
+
 ## Install
 
 - Install with Composer via `composer require bymayo/delete-account` from your project directory
