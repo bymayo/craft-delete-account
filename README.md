@@ -1,5 +1,3 @@
-**Looking for Craft 2 Support?** [Delete Account for Craft 2](https://github.com/bymayo/craft-delete-account/tree/craft-2)
-
 <img src="https://github.com/bymayo/craft-delete-account/blob/master/resources/img/icon.png?raw=true" width="50">
 
 # Delete Account for Craft 3.x
