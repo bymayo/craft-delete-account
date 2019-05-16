@@ -1,10 +1,4 @@
 <?php
-/**
- * @author     ByMayo
- * @package    DeleteAccount
- * @since      1.0.0
- * @copyright  Copyright (c) 2018 ByMayo
- */
 
 namespace bymayo\deleteaccount\models;
 
@@ -27,5 +21,5 @@ class Settings extends Model
             [['confirmationKeyword', 'redirect'], 'string']
         ];
     }
-    
+
 }
