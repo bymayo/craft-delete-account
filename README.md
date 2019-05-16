@@ -25,7 +25,7 @@ You can also install the plugin via the Plugin Store in the Craft Admin CP.
 
 ## Config
 
-Navigate to Settings -> Plugins -> Delete Account -> Settings to customise the config settings.
+Navigate to `Settings -> Plugins -> Delete Account -> Settings` to customise the config settings.
 
 ## Templating
 
@@ -35,7 +35,7 @@ You can simply output the form in your account templates by using the following 
 {{ craft.deleteAccount.form }}
 ```
 
-If you want more control you can take the `form` template from `bymayo/deleteaccount/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
+If you want more control you can take the `form` template from `bymayo/deleteaccount/src/templates/form` and place this in your own template folder. Then include this with the `{% include %}` twig tag.
 
 You can optionally grab settings from the plugin:
 
