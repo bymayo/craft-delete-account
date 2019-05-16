@@ -1,8 +1,11 @@
 # Delete Account Changelog
 
-All notable changes to this project will be documented in this file.
+## 1.0.2 - 2018-05-16
+### Fixed
+- Issue where the `redirect` setting was being ignored ([#3](https://github.com/bymayo/craft-delete-account/issues/3))
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
+### Added
+- Config file example (See `src/config.php`)
 
 ## 1.0.1 - 2018-05-25
 ### Changed
