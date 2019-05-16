@@ -28,7 +28,7 @@ class DefaultController extends Controller
          if (DeleteAccountService::checkAccount($attributes))
          {
             Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Your account has been deleted.');
-            return $attributes->getBodyParam('redirect');
+            return $this->redirect($attributes->getBodyParam('redirect'));
          }
          else {
             Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
