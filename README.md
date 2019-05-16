@@ -27,6 +27,8 @@ You can also install the plugin via the Plugin Store in the Craft Admin CP.
 
 Navigate to `Settings -> Plugins -> Delete Account -> Settings` to customise the config settings.
 
+Or, copy the `src/config.php` top your projects config folder and rename the file `delete-account.php`.
+
 ## Templating
 
 You can simply output the form in your account templates by using the following method:
