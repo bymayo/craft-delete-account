@@ -30,8 +30,7 @@ class DefaultController extends Controller
 	
 			} else {
 		
-				Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Your account has been deleted.');
-		
+				Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Your account has been deleted.');	
 				return $this->redirect($request->getBodyParam('redirect'));
 			}
 				
