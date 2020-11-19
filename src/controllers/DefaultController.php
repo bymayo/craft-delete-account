@@ -15,22 +15,41 @@ class DefaultController extends Controller
 
     public function actionDelete()
     {
-
-         $this->requirePostRequest();
-         $attributes = Craft::$app->getRequest();
-
-         if (DeleteAccountService::checkAccount($attributes))
-         {
-            Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Your account has been deleted.');
-            return $this->redirect($attributes->getBodyParam('redirect'));
-         }
-         else {
-            Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
-            return false;
-         }
-
-         return false;
-
-   }
+		$this->requirePostRequest();
+		
+		$request = Craft::$app->getRequest();
+		
+		if (DeleteAccountService::checkAccount($request))
+		{
+			if ($request->getAcceptsJson()) {
+	
+				return $this->asJson([
+					'success' => true,
+					'message' => 'Your account has been deleted.'
+					]);
+	
+			} else {
+		
+				Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Your account has been deleted.');
+		
+				return $this->redirect($request->getBodyParam('redirect'));
+			}
+				
+		} else {
+	         
+			if ($request->getAcceptsJson()) {
+		
+				return $this->asJson([
+					'success' => false,
+					'message' => 'Sorry your account cannot be deleted.'
+				]);
+		
+			} else {
+				Craft::$app->getSession()->setFlash('deleteAccountFlash', 'Sorry your account cannot be deleted.');
+			}
+		}
+		
+		return false;	
+	}
 
 }
