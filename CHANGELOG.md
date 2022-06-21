@@ -2,7 +2,7 @@
 
 ## 1.0.3 - 2022-06-21
 
-> {note} Delete Account plugin is available for Craft 4, but has been completly rebuilt as a new plugin, with more features called Porter (https://github.com/bymayo/craft-porter).
+> {note} Delete Account plugin is available for Craft 4, but has been completely rebuilt as a new plugin, with more features called Porter (https://github.com/bymayo/craft-porter).
 ### Changed
 - Icons for dark mode
 

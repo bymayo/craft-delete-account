@@ -1,4 +1,4 @@
-> ⚠️ Looking for a Craft 4 version? Delete Account plugin is available for Craft 4, but has been completly rebuilt as a new plugin, with more features called Porter (https://github.com/bymayo/craft-porter).
+> ⚠️ Looking for a Craft 4 version? Delete Account plugin is available for Craft 4, but has been completely rebuilt as a new plugin, with more features called Porter (https://github.com/bymayo/craft-porter).
 
 <img src="https://github.com/bymayo/craft-delete-account/blob/master/resources/icon.png?raw=true" width="50">
 
