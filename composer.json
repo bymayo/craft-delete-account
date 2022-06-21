@@ -2,7 +2,7 @@
     "name": "bymayo/delete-account",
     "description": "Allows users to delete their own account within Twig templates (Front end).",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "craft",
         "cms",
