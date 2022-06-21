@@ -29,7 +29,11 @@ class DeleteAccountService extends Component
       else {
          if ($attributes->getBodyParam('confirmationKeyword') == self::settings('confirmationKeyword'))
          {
-            return Craft::$app->getElements()->deleteElementById($currentUser->id, 'craft\elements\User');
+            if (Craft::$app->getElements()->deleteElementById($currentUser->id, 'craft\elements\User'))
+            {
+               Craft::$app->getUser()->logout(false);
+               return true;
+            }
          }
          return false;
       }

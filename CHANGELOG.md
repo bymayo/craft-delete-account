@@ -6,6 +6,10 @@
 ### Changed
 - Icons for dark mode
 
+### Fixed
+- Deprecation warnings for CSRF
+- Blank redirect when deleting a user
+
 ## 1.0.2 - 2018-05-16
 ### Fixed
 - Issue where the `redirect` setting was being ignored ([#3](https://github.com/bymayo/craft-delete-account/issues/3))

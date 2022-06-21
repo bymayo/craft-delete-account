@@ -2,7 +2,7 @@
 
    <form method="post" accept-charset="UTF-8">
 
-      {{ getCsrfInput() }}
+      {{ csrfInput() }}
       <input type="hidden" name="action" value="delete-account/default/delete">
       <input type="hidden" name="redirect" value="{{ craft.deleteAccount.settings('redirect') }}">
 
